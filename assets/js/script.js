@@ -146,3 +146,4 @@ function gameStart() {
 
 startButton.addEventListener("click", gameStart)
 document.addEventListener("keydown", handleKeyUp)
+document.addEventListener("touchstart", handleKeyUp)
