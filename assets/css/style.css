@@ -1,0 +1,119 @@
+body {
+    background: #fafafa;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, span {
+    font-family: 'Press Start 2P', cursive;
+    color: #666;
+}
+
+#start-game {
+    background-image: url('../images/restart.png');
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -30px;
+}
+
+.dino {
+    width: 57px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    background-image: url('../images/dino-run.png');
+    background-position-x: 0;
+}
+
+.dino.run {
+    background-position-x: 114px;
+    animation: dinorun 0.5s infinite steps(2, end);
+}
+
+.dino.hurt {
+    width: 51px;
+    background-image: url('../images/dino-hurt.png');
+}
+
+.cactus {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    background-image: url('../images/cactus.png');
+}
+
+.game-over-message {
+    text-align: center;
+    color: #666;
+    margin-top: 50px;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+
+    to {
+        background-position: 0%;
+    }
+}
+
+
+@keyframes dinorun {
+    from {
+        background-position-x: 57px;
+    }
+
+    to {
+        background-position-x: 171px;
+    }
+}
+
+
+.background {
+     position: absolute;
+     bottom: 0;
+     background-image: url('../images/background.png');
+     background-repeat: repeat-x;
+     width: 100%;
+     height: 200px;
+}
+
+.game-started {
+    animation: slideright 600s infinite linear;
+}
+
+.game-container {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 10%;
+    height: 200px; 
+}
+
+.score-container, .hi-score-container {
+    position: absolute;
+    z-index: 1;
+}
+
+.score-container {
+    right: 10px;
+    top: 10px;
+}
+
+.hi-score-container {
+    right: 10px;
+    top: 35px;
+}
